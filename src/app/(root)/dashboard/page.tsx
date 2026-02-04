@@ -1,16 +1,19 @@
-import { Sidebar } from "@/components/sidebar/sidebar";
-import { AlignLeftIcon } from "lucide-react";
-
 export default function DashboardPage() {
   return (
-    <main className="relative flex min-h-svh w-full items-start justify-start bg-white">
-      <Sidebar />
+    <div className="w-full p-4">
+      <section className="w-full">
+        <div className="w-full space-y-1 leading-tight lg:flex-1">
+          <p className="tracking-05px text-lg font-light text-gray-700">Olá</p>
 
-      <div className="h-svh flex-1 rounded-3xl border-8 border-white bg-gray-200">
-        <header className="p-5">
-          <h1>Header</h1>
-        </header>
-      </div>
-    </main>
+          <h2 className="-tracking-025px text-4xl font-semibold">
+            Richard Guedes
+          </h2>
+
+          <p className="font-light text-gray-700">
+            Confira os status das suas tarefas
+          </p>
+        </div>
+      </section>
+    </div>
   );
 }

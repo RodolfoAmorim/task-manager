@@ -5,6 +5,7 @@ import { HomeIcon, BoltIcon, AlignLeftIcon } from "lucide-react";
 import { Avatar } from "../ui/avatar";
 import { SidebarLink } from "./sidebar-link";
 import { useState, useRef, MouseEvent } from "react";
+import { Button } from "../ui/button";
 
 export function Sidebar() {
   const [open, setOpen] = useState(false);
@@ -22,13 +23,15 @@ export function Sidebar() {
 
   return (
     <>
-      <button
+      <Button
+        variant={"ghost"}
+        size={"icon"}
         type="button"
-        className="lg: absolute top-4 left-4 z-20 lg:top-7 lg:left-24"
+        className={`absolute top-5 z-20 ring-4 ring-gray-200 transition-all duration-300 lg:top-7 lg:size-8 ${open ? "left-60 -translate-x-3 lg:left-60" : "left-5 lg:left-24 lg:-translate-x-2"}`}
         onClick={() => handleToggleOpen()}
       >
         <AlignLeftIcon />
-      </button>
+      </Button>
 
       <aside
         data-open={open}
@@ -46,7 +49,7 @@ export function Sidebar() {
               className="h-12 w-8 object-center"
             />
 
-            <h1 className="text-xl font-semibold text-gray-900 lg:hidden">
+            <h1 className="w-0 overflow-hidden text-xl font-semibold text-gray-900 transition-all duration-150 group-data-[open=true]:w-40">
               Tansk
             </h1>
           </div>

@@ -40,7 +40,7 @@
   /* font */
   --font-sans: var(--font-outfit);
   --tracking-05px: 0.5px;
-  --tracking-025px: 0.5px;
+  --tracking-025px: 0.25px;
 
   /* colors */
   --color-*: initial;

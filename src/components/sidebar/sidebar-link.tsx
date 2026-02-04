@@ -22,7 +22,7 @@ export function SidebarLink({
       >
         <Icon className="size-5 min-w-5" />
 
-        <span className="group-data-[open=false]delay-300 w-0 overflow-hidden transition-all duration-150 group-data-[open=true]:w-40">
+        <span className="w-0 overflow-hidden transition-all duration-150 group-data-[open=true]:w-40">
           {name}
         </span>
       </Link>
