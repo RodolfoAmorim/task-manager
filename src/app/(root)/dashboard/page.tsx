@@ -1,5 +1,7 @@
 import { StackedBarChart } from "@/components/charts/stacked-bar-chart";
 import { KpiCard } from "@/components/ui/kpi-card";
+import { RecentActivitiesCard } from "@/features/dashboard/recent-activities-card";
+import { WorkloadCard } from "@/features/dashboard/workload-card";
 
 const data = [
   { name: "Jan", valueA: 5, valueB: 10 },
@@ -60,12 +62,18 @@ export default function DashboardPage() {
         </div>
 
         <div className="flex w-full flex-col items-center justify-start gap-6">
-          <StackedBarChart
-            title="Tarefas por mês"
-            legendA="Completas"
-            legendB="Restantes"
-            data={data}
-          />
+          <div className="w-full">
+            <StackedBarChart
+              title="Tarefas por mês"
+              legendA="Completas"
+              legendB="Restantes"
+              data={data}
+            />
+          </div>
+
+          <WorkloadCard />
+
+          <RecentActivitiesCard />
         </div>
       </section>
     </div>

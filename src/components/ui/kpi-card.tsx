@@ -1,3 +1,5 @@
+import { Progress } from "./progress";
+
 interface KpiCardProps {
   title: string;
   value: number;
@@ -9,7 +11,7 @@ export function KpiCard({ title, value, subLabel, total = 100 }: KpiCardProps) {
   const percentage = Math.min(Math.round((value / total) * 100), 100);
 
   return (
-    <div className="shadow-card flex min-h-48 min-w-48 snap-start flex-col items-start justify-between gap-4 rounded-xl bg-white px-4 py-6">
+    <div className="card flex min-h-48 min-w-48 snap-start flex-col items-start justify-between gap-4 px-4 py-6">
       <div className="flex flex-col items-start justify-start space-y-4 text-gray-800">
         <h3 className="tracking-05px leading-none">{title}</h3>
 
@@ -27,13 +29,11 @@ export function KpiCard({ title, value, subLabel, total = 100 }: KpiCardProps) {
           </span>
         </div>
 
-        {/* progress bar */}
-        <div className="relative h-3 w-full bg-[url('/img/bars.svg')] bg-size-[10px] bg-top-left bg-repeat-x">
-          <div
-            className="absolute inset-0 right-auto rounded-xs bg-purple-400"
-            style={{ width: percentage + "px" }}
-          />
-        </div>
+        <Progress
+          value={percentage}
+          height={12}
+          color={"var(--color-purple-400)"}
+        />
       </div>
     </div>
   );

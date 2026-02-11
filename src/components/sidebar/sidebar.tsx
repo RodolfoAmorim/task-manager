@@ -27,7 +27,7 @@ export function Sidebar() {
         variant={"ghost"}
         size={"icon"}
         type="button"
-        className={`absolute top-5 z-20 ring-4 ring-gray-200 transition-all duration-300 lg:top-7 lg:size-8 ${open ? "left-60 -translate-x-3 lg:left-60" : "left-5 lg:left-24 lg:-translate-x-2"}`}
+        className={`absolute top-6 z-20 ring-4 ring-gray-200 transition-all duration-300 lg:top-7 lg:size-8 ${open ? "left-60 -translate-x-3 lg:left-60" : "left-5 lg:left-24 lg:-translate-x-2"}`}
         onClick={() => handleToggleOpen()}
       >
         <AlignLeftIcon />
