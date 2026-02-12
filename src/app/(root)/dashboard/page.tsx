@@ -1,5 +1,6 @@
 import { StackedBarChart } from "@/components/charts/stacked-bar-chart";
 import { KpiCard } from "@/components/ui/kpi-card";
+import { LastTasksTable } from "@/features/dashboard/last-tasks-table";
 import { RecentActivitiesCard } from "@/features/dashboard/recent-activities-card";
 import { WorkloadCard } from "@/features/dashboard/workload-card";
 
@@ -71,9 +72,15 @@ export default function DashboardPage() {
             />
           </div>
 
-          <WorkloadCard />
+          <div className="flex w-full flex-col items-center justify-start gap-6">
+            <WorkloadCard />
 
-          <RecentActivitiesCard />
+            <RecentActivitiesCard />
+          </div>
+        </div>
+
+        <div className="mt-6 w-full">
+          <LastTasksTable />
         </div>
       </section>
     </div>
