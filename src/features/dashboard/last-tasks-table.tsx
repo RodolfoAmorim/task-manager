@@ -56,7 +56,7 @@ export function LastTasksTable() {
   ];
 
   return (
-    <div className="card w-full space-y-6">
+    <div className="card w-full space-y-6 xl:w-auto xl:max-w-219">
       <div className="flex w-full items-center justify-between gap-2">
         <h1 className="card-title text-lg">Lista de Tarefas</h1>
 

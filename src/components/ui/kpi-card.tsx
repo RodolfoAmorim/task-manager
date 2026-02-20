@@ -11,11 +11,11 @@ export function KpiCard({ title, value, subLabel, total = 100 }: KpiCardProps) {
   const percentage = Math.min(Math.round((value / total) * 100), 100);
 
   return (
-    <div className="card flex min-h-48 min-w-48 snap-start flex-col items-start justify-between gap-4 px-4 py-6">
-      <div className="flex flex-col items-start justify-start space-y-4 text-gray-800">
-        <h3 className="tracking-05px leading-none">{title}</h3>
+    <div className="card flex min-h-48 min-w-48 snap-start flex-col items-start justify-between gap-4 px-4 py-6 lg:min-h-31 xl:flex-1">
+      <div className="flex w-full flex-col items-start justify-start space-y-4 text-gray-800 xl:flex-row xl:items-center xl:justify-between xl:gap-4 xl:space-y-0">
+        <h3 className="tracking-05px leading-none xl:text-xl">{title}</h3>
 
-        <span className="tracking-05px text-4xl leading-tight font-medium">
+        <span className="tracking-05px text-4xl leading-tight font-medium xl:text-2xl">
           {value}
         </span>
       </div>

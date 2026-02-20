@@ -13,7 +13,7 @@ const chartData = [
 
 export function PriorityTasksChart() {
   return (
-    <div className="card w-full space-y-6">
+    <div className="card w-full space-y-6 xl:w-auto xl:flex-1">
       <div className="mb-6 flex items-center justify-between">
         <h3 className="card-title text-lg">Tarefas por Prioridades</h3>
 

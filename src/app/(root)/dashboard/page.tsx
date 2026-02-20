@@ -1,4 +1,3 @@
-import { DonutChart } from "@/components/charts/donut-chart";
 import { StackedBarChart } from "@/components/charts/stacked-bar-chart";
 import { KpiCard } from "@/components/ui/kpi-card";
 import { LastTasksTable } from "@/features/dashboard/last-tasks-table";
@@ -21,30 +20,17 @@ const data = [
   { name: "Dez", valueA: 16, valueB: 10 },
 ];
 
-const chartData = [
-  { name: "Críticas", value: 15, color: "#1e1b4b" }, // Azul escuro
-  { name: "Alta", value: 20, color: "#dc2626" }, // Vermelho
-  { name: "Média", value: 35, color: "#f59e0b" }, // Laranja
-  { name: "Baixa", value: 25, color: "#22c55e" }, // Verde
-  { name: "Leve", value: 5, color: "#e5e7eb" }, // Cinza claro
-];
-
-const centerInfo = {
-  value: 20,
-  label: "Alta",
-};
-
 export default function DashboardPage() {
   return (
     <div className="w-full p-4">
       <section className="w-full">
-        <div className="w-full">
-          <div className="w-full space-y-1 leading-tight lg:flex-1">
-            <p className="tracking-05px text-lg font-light text-gray-700">
+        <div className="w-full lg:flex lg:items-center lg:justify-between lg:gap-10">
+          <div className="w-full space-y-1 leading-tight lg:w-auto lg:flex-1 xl:max-w-fit xl:flex-auto">
+            <p className="tracking-05px text-lg font-light text-gray-700 xl:text-2xl">
               Olá
             </p>
 
-            <h2 className="-tracking-025px text-4xl font-semibold">
+            <h2 className="-tracking-025px text-4xl font-semibold xl:text-5xl">
               Richard Guedes
             </h2>
 
@@ -53,7 +39,7 @@ export default function DashboardPage() {
             </p>
           </div>
 
-          <div className="no-scrollbar -ml-4 flex w-[calc(100%+32px)] items-center justify-start gap-6 overflow-x-auto px-4 py-6">
+          <div className="no-scrollbar -ml-4 flex w-[calc(100%+32px)] items-center justify-start gap-6 overflow-x-auto px-4 py-6 lg:w-auto lg:max-w-fit xl:max-w-none xl:flex-1">
             <KpiCard
               title="Tarefas Pendentes"
               value={21}
@@ -77,8 +63,8 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="flex w-full flex-col items-center justify-start gap-6">
-          <div className="w-full">
+        <div className="flex w-full flex-col items-center justify-start gap-6 xl:flex-row">
+          <div className="w-full xl:max-w-219">
             <StackedBarChart
               title="Tarefas por mês"
               legendA="Completas"
@@ -87,14 +73,14 @@ export default function DashboardPage() {
             />
           </div>
 
-          <div className="flex w-full flex-col items-center justify-start gap-6">
+          <div className="flex w-full flex-col items-center justify-start gap-6 xl:w-auto xl:flex-1">
             <WorkloadCard />
 
             <RecentActivitiesCard />
           </div>
         </div>
 
-        <div className="mt-6 w-full space-y-6">
+        <div className="mt-6 w-full space-y-6 xl:flex xl:items-stretch xl:justify-between xl:gap-6 xl:space-y-0">
           <LastTasksTable />
 
           <PriorityTasksChart />

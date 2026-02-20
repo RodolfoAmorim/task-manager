@@ -42,7 +42,7 @@ export function StackedBarChart({
 
   return (
     <div className={cn("card h-92 w-full", className)}>
-      <header className="mb-8 flex flex-col items-center justify-center gap-4 text-center">
+      <header className="mb-8 flex flex-col items-center justify-center gap-4 text-center lg:flex-row lg:justify-between">
         <h2 className="card-title text-xl">{title}</h2>
 
         <div className="flex flex-wrap items-center justify-center gap-4 text-sm leading-tight text-gray-700">

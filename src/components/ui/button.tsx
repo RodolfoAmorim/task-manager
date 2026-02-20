@@ -13,6 +13,7 @@ const buttonVariants = cva(
           "border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white",
       },
       size: {
+        sm: "h-10 text-base",
         md: "h-12 text-base",
         lg: "h-14 text-lg",
         icon: "size-10 p-0 [&>svg]:size-5",
