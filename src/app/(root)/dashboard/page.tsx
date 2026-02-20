@@ -1,6 +1,8 @@
+import { DonutChart } from "@/components/charts/donut-chart";
 import { StackedBarChart } from "@/components/charts/stacked-bar-chart";
 import { KpiCard } from "@/components/ui/kpi-card";
 import { LastTasksTable } from "@/features/dashboard/last-tasks-table";
+import { PriorityTasksChart } from "@/features/dashboard/priority-tasks-card";
 import { RecentActivitiesCard } from "@/features/dashboard/recent-activities-card";
 import { WorkloadCard } from "@/features/dashboard/workload-card";
 
@@ -18,6 +20,19 @@ const data = [
   { name: "Nov", valueA: 19, valueB: 5 },
   { name: "Dez", valueA: 16, valueB: 10 },
 ];
+
+const chartData = [
+  { name: "Críticas", value: 15, color: "#1e1b4b" }, // Azul escuro
+  { name: "Alta", value: 20, color: "#dc2626" }, // Vermelho
+  { name: "Média", value: 35, color: "#f59e0b" }, // Laranja
+  { name: "Baixa", value: 25, color: "#22c55e" }, // Verde
+  { name: "Leve", value: 5, color: "#e5e7eb" }, // Cinza claro
+];
+
+const centerInfo = {
+  value: 20,
+  label: "Alta",
+};
 
 export default function DashboardPage() {
   return (
@@ -79,8 +94,10 @@ export default function DashboardPage() {
           </div>
         </div>
 
-        <div className="mt-6 w-full">
+        <div className="mt-6 w-full space-y-6">
           <LastTasksTable />
+
+          <PriorityTasksChart />
         </div>
       </section>
     </div>
